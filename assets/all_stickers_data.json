@@ -1,0 +1,609 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2759
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red202\green202\blue202;\red23\green23\blue23;\red140\green211\blue254;
+\red194\green126\blue101;\red70\green137\blue204;}
+{\*\expandedcolortbl;;\cssrgb\c83137\c83137\c83137;\cssrgb\c11765\c11765\c11765;\cssrgb\c61176\c86275\c99608;
+\cssrgb\c80784\c56863\c47059;\cssrgb\c33725\c61176\c83922;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 [\cb1 \
+\cb3     [\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "purchaseId"\cf2 \strokec2 : \cf5 \strokec5 "FREE"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerSetName"\cf2 \strokec2 : \cf5 \strokec5 "FAVOURITES"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerNames"\cf2 \strokec2 : [],\cb1 \
+\cb3             \cf4 \strokec4 "isLocked"\cf2 \strokec2 : \cf6 \strokec6 false\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "purchaseId"\cf2 \strokec2 : \cf5 \strokec5 "FREE"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerSetName"\cf2 \strokec2 : \cf5 \strokec5 "RECENT"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerNames"\cf2 \strokec2 : [],\cb1 \
+\cb3             \cf4 \strokec4 "isLocked"\cf2 \strokec2 : \cf6 \strokec6 false\cf2 \cb1 \strokec2 \
+\cb3         \}\cb1 \
+\cb3     ],\cb1 \
+\cb3     [\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "purchaseId"\cf2 \strokec2 : \cf5 \strokec5 "com.qoobee.qoobeestickersanimated.MessageExtension.EVERYDAY5"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerSetName"\cf2 \strokec2 : \cf5 \strokec5 "EVERYDAY 5"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerNames"\cf2 \strokec2 : [\cb1 \
+\cb3                 \cf5 \strokec5 "IM_DAY5_0"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "IM_DAY5_1"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "IM_DAY5_2"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "IM_DAY5_3"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "IM_DAY5_4"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "IM_DAY5_5"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "IM_DAY5_6"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "IM_DAY5_7"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "IM_DAY5_8"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "IM_DAY5_9"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "IM_DAY5_10"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "IM_DAY5_11"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "IM_DAY5_12"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "IM_DAY5_13"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "IM_DAY5_14"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "IM_DAY5_15"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "IM_DAY5_16"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "IM_DAY5_17"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "IM_DAY5_18"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "IM_DAY5_19"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "IM_DAY5_20"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "IM_DAY5_21"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "IM_DAY5_22"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "IM_DAY5_23"\cf2 \cb1 \strokec2 \
+\cb3             ],\cb1 \
+\cb3             \cf4 \strokec4 "isLocked"\cf2 \strokec2 : \cf6 \strokec6 true\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "purchaseId"\cf2 \strokec2 : \cf5 \strokec5 "com.qoobee.qoobeestickersanimated.MessageExtension.EVERYDAY"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerSetName"\cf2 \strokec2 : \cf5 \strokec5 "EVERYDAY 1"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerNames"\cf2 \strokec2 : [\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday0_0"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday0_1"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday0_2"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday0_3"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday0_4"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday0_5"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday0_6"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday0_7"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday0_8"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday0_9"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday0_10"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday0_11"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday0_12"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday0_13"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday0_14"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday0_15"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday0_16"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday0_17"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday0_18"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday0_19"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday0_20"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday0_21"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday0_22"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday0_23"\cf2 \cb1 \strokec2 \
+\cb3             ],\cb1 \
+\cb3             \cf4 \strokec4 "isLocked"\cf2 \strokec2 : \cf6 \strokec6 true\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "purchaseId"\cf2 \strokec2 : \cf5 \strokec5 "com.qoobee.qoobeestickersanimated.MessageExtension.EVERYDAY2"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerSetName"\cf2 \strokec2 : \cf5 \strokec5 "EVERYDAY 2 (Static)"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerNames"\cf2 \strokec2 : [\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_0"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_1"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_2"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_3"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_4"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_5"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_6"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_7"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_8"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_9"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_10"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_11"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_12"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_13"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_14"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_15"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_16"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_17"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_18"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_19"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_20"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_21"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_22"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_23"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_24"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_25"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_26"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_27"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_28"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday1_29"\cf2 \cb1 \strokec2 \
+\cb3             ],\cb1 \
+\cb3             \cf4 \strokec4 "isLocked"\cf2 \strokec2 : \cf6 \strokec6 true\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "purchaseId"\cf2 \strokec2 : \cf5 \strokec5 "com.qoobee.qoobeestickersanimated.MessageExtension.EVERYDAY3"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerSetName"\cf2 \strokec2 : \cf5 \strokec5 "EVERYDAY 3 (Static)"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerNames"\cf2 \strokec2 : [\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_0"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_1"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_2"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_3"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_4"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_5"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_6"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_7"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_8"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_9"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_10"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_11"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_12"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_13"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_14"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_15"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_16"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_17"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_18"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_19"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_20"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_21"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_22"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_23"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_24"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_25"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_26"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_27"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_28"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday2_29"\cf2 \cb1 \strokec2 \
+\cb3             ],\cb1 \
+\cb3             \cf4 \strokec4 "isLocked"\cf2 \strokec2 : \cf6 \strokec6 true\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "purchaseId"\cf2 \strokec2 : \cf5 \strokec5 "com.qoobee.qoobeestickersanimated.MessageExtension.EVERYDAY4"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerSetName"\cf2 \strokec2 : \cf5 \strokec5 "EVERYDAY 4 (Static)"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerNames"\cf2 \strokec2 : [\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday3_0"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday3_1"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday3_2"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday3_3"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday3_4"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday3_5"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday3_6"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday3_7"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday3_8"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday3_9"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday3_10"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday3_11"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday3_12"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday3_13"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday3_14"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday3_15"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday3_16"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Everyday3_17"\cf2 \cb1 \strokec2 \
+\cb3             ],\cb1 \
+\cb3             \cf4 \strokec4 "isLocked"\cf2 \strokec2 : \cf6 \strokec6 true\cf2 \cb1 \strokec2 \
+\cb3         \}\cb1 \
+\cb3     ],\cb1 \
+\cb3     [\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "purchaseId"\cf2 \strokec2 : \cf5 \strokec5 "com.qoobee.qoobeestickersanimated.MessageExtension.HAPPY"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerSetName"\cf2 \strokec2 : \cf5 \strokec5 "HAPPY 1"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerNames"\cf2 \strokec2 : [\cb1 \
+\cb3                 \cf5 \strokec5 "Happy0_0"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy0_1"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy0_2"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy0_3"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy0_4"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy0_5"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy0_6"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy0_7"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy0_8"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy0_9"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy0_10"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy0_11"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy0_12"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy0_13"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy0_14"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy0_15"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy0_16"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy0_17"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy0_18"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy0_19"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy0_20"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy0_21"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy0_22"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy0_23"\cf2 \cb1 \strokec2 \
+\cb3             ],\cb1 \
+\cb3             \cf4 \strokec4 "isLocked"\cf2 \strokec2 : \cf6 \strokec6 true\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "purchaseId"\cf2 \strokec2 : \cf5 \strokec5 "com.qoobee.qoobeestickersanimated.MessageExtension.HAPPY02"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerSetName"\cf2 \strokec2 : \cf5 \strokec5 "HAPPY 2"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerNames"\cf2 \strokec2 : [\cb1 \
+\cb3                 \cf5 \strokec5 "Happy1_0"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy1_1"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy1_2"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy1_3"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy1_4"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy1_5"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy1_6"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy1_7"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy1_8"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy1_9"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy1_10"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy1_11"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy1_12"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy1_13"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy1_14"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy1_15"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy1_16"\cf2 \cb1 \strokec2 \
+\cb3             ],\cb1 \
+\cb3             \cf4 \strokec4 "isLocked"\cf2 \strokec2 : \cf6 \strokec6 true\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "purchaseId"\cf2 \strokec2 : \cf5 \strokec5 "com.qoobee.qoobeestickersanimated.MessageExtension.HAPPY03"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerSetName"\cf2 \strokec2 : \cf5 \strokec5 "HAPPY 3 (Static)"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerNames"\cf2 \strokec2 : [\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_0"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_1"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_2"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_3"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_4"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_5"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_6"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_7"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_8"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_9"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_10"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_11"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_12"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_13"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_14"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_15"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_16"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_17"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_18"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_19"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_20"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_21"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_22"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_23"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_24"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_25"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_26"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_27"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy2_28"\cf2 \cb1 \strokec2 \
+\cb3             ],\cb1 \
+\cb3             \cf4 \strokec4 "isLocked"\cf2 \strokec2 : \cf6 \strokec6 true\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "purchaseId"\cf2 \strokec2 : \cf5 \strokec5 "com.qoobee.qoobeestickersanimated.MessageExtension.HAPPY04"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerSetName"\cf2 \strokec2 : \cf5 \strokec5 "HAPPY 4 (Static)"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerNames"\cf2 \strokec2 : [\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_0"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_1"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_2"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_3"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_4"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_5"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_6"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_7"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_8"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_9"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_10"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_11"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_12"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_13"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_14"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_15"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_16"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_17"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_18"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_19"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_20"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_21"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_22"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_23"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_24"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_25"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_26"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_27"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_28"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy3_29"\cf2 \cb1 \strokec2 \
+\cb3             ],\cb1 \
+\cb3             \cf4 \strokec4 "isLocked"\cf2 \strokec2 : \cf6 \strokec6 true\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "purchaseId"\cf2 \strokec2 : \cf5 \strokec5 "com.qoobee.qoobeestickersanimated.MessageExtension.HAPPY05"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerSetName"\cf2 \strokec2 : \cf5 \strokec5 "HAPPY 5 (Static)"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerNames"\cf2 \strokec2 : [\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_0"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_1"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_2"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_3"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_4"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_5"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_6"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_7"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_8"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_9"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_10"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_11"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_12"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_13"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_14"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_15"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_16"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_17"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_18"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_19"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_20"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_21"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_22"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_23"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Happy4_24"\cf2 \cb1 \strokec2 \
+\cb3             ],\cb1 \
+\cb3             \cf4 \strokec4 "isLocked"\cf2 \strokec2 : \cf6 \strokec6 true\cf2 \cb1 \strokec2 \
+\cb3         \}\cb1 \
+\cb3     ],\cb1 \
+\cb3     [\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "purchaseId"\cf2 \strokec2 : \cf5 \strokec5 "com.qoobee.qoobeestickersanimated.MessageExtension.LOVE"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerSetName"\cf2 \strokec2 : \cf5 \strokec5 "LOVE 1"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerNames"\cf2 \strokec2 : [\cb1 \
+\cb3                 \cf5 \strokec5 "Love0_0"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love0_1"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love0_2"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love0_3"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love0_4"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love0_5"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love0_6"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love0_7"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love0_8"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love0_9"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love0_10"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love0_11"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love0_12"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love0_13"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love0_14"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love0_15"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love0_16"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love0_17"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love0_18"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love0_19"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love0_20"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love0_21"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love0_22"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love0_23"\cf2 \cb1 \strokec2 \
+\cb3             ],\cb1 \
+\cb3             \cf4 \strokec4 "isLocked"\cf2 \strokec2 : \cf6 \strokec6 true\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "purchaseId"\cf2 \strokec2 : \cf5 \strokec5 "com.qoobee.qoobeestickersanimated.MessageExtension.LOVE"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerSetName"\cf2 \strokec2 : \cf5 \strokec5 "LOVE 2 (Static)"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerNames"\cf2 \strokec2 : [\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_0"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_1"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_2"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_3"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_4"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_5"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_6"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_7"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_8"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_9"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_10"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_11"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_12"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_13"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_14"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_15"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_16"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_17"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_18"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_19"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_20"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_21"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_22"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_23"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_24"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_25"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_26"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_27"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_28"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love1_29"\cf2 \cb1 \strokec2 \
+\cb3             ],\cb1 \
+\cb3             \cf4 \strokec4 "isLocked"\cf2 \strokec2 : \cf6 \strokec6 true\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "purchaseId"\cf2 \strokec2 : \cf5 \strokec5 "com.qoobee.qoobeestickersanimated.MessageExtension.LOVE"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerSetName"\cf2 \strokec2 : \cf5 \strokec5 "LOVE 3 (Static)"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerNames"\cf2 \strokec2 : [\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_0"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_1"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_2"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_3"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_4"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_5"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_6"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_7"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_8"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_9"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_10"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_11"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_12"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_13"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_14"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_15"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_16"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_17"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_18"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_19"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_20"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_21"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_22"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_23"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_24"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_25"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_26"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_27"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love2_28"\cf2 \cb1 \strokec2 \
+\cb3             ],\cb1 \
+\cb3             \cf4 \strokec4 "isLocked"\cf2 \strokec2 : \cf6 \strokec6 true\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "purchaseId"\cf2 \strokec2 : \cf5 \strokec5 "com.qoobee.qoobeestickersanimated.MessageExtension.LOVE"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerSetName"\cf2 \strokec2 : \cf5 \strokec5 "LOVE 4"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerNames"\cf2 \strokec2 : [\cb1 \
+\cb3                 \cf5 \strokec5 "Love3_0"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love3_1"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love3_2"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love3_3"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love3_4"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Love3_5"\cf2 \cb1 \strokec2 \
+\cb3             ],\cb1 \
+\cb3             \cf4 \strokec4 "isLocked"\cf2 \strokec2 : \cf6 \strokec6 true\cf2 \cb1 \strokec2 \
+\cb3         \}\cb1 \
+\cb3     ],\cb1 \
+\cb3     [\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "purchaseId"\cf2 \strokec2 : \cf5 \strokec5 "com.qoobee.qoobeestickersanimated.MessageExtension.SAD"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerSetName"\cf2 \strokec2 : \cf5 \strokec5 "SAD 1"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerNames"\cf2 \strokec2 : [\cb1 \
+\cb3                 \cf5 \strokec5 "Sad0_0"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Sad0_1"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Sad0_2"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Sad0_3"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Sad0_4"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Sad0_5"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Sad0_6"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Sad0_7"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Sad0_8"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Sad0_9"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Sad0_10"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Sad0_11"\cf2 \cb1 \strokec2 \
+\cb3             ],\cb1 \
+\cb3             \cf4 \strokec4 "isLocked"\cf2 \strokec2 : \cf6 \strokec6 true\cf2 \cb1 \strokec2 \
+\cb3         \}\cb1 \
+\cb3     ],\cb1 \
+\cb3     [\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "purchaseId"\cf2 \strokec2 : \cf5 \strokec5 "com.qoobee.qoobeestickersanimated.MessageExtension.ANNOYED"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerSetName"\cf2 \strokec2 : \cf5 \strokec5 "ANNOYED 1"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerNames"\cf2 \strokec2 : [\cb1 \
+\cb3                 \cf5 \strokec5 "Angry0_0"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry0_1"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry0_2"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry0_3"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry0_4"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry0_5"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry0_6"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry0_7"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry0_8"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry0_9"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry0_10"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry0_11"\cf2 \cb1 \strokec2 \
+\cb3             ],\cb1 \
+\cb3             \cf4 \strokec4 "isLocked"\cf2 \strokec2 : \cf6 \strokec6 true\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "purchaseId"\cf2 \strokec2 : \cf5 \strokec5 "com.qoobee.qoobeestickersanimated.MessageExtension.ANNOYED2"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerSetName"\cf2 \strokec2 : \cf5 \strokec5 "ANNOYED 2 (Static)"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerNames"\cf2 \strokec2 : [\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_0"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_1"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_2"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_3"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_4"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_5"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_6"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_7"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_8"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_9"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_10"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_11"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_12"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_13"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_14"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_15"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_16"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_17"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_18"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_19"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_20"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_21"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_22"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_23"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_24"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_25"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_26"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_27"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_28"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_29"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Angry1_30"\cf2 \cb1 \strokec2 \
+\cb3             ],\cb1 \
+\cb3             \cf4 \strokec4 "isLocked"\cf2 \strokec2 : \cf6 \strokec6 true\cf2 \cb1 \strokec2 \
+\cb3         \}\cb1 \
+\cb3     ],\cb1 \
+\cb3     [\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "purchaseId"\cf2 \strokec2 : \cf5 \strokec5 "FREE"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerSetName"\cf2 \strokec2 : \cf5 \strokec5 "FESTIVE 2"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerNames"\cf2 \strokec2 : [\cb1 \
+\cb3                 \cf5 \strokec5 "Festive1_1"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Festive1_2"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Festive1_3"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Festive1_4"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Festive1_5"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Festive1_6"\cf2 \cb1 \strokec2 \
+\cb3             ],\cb1 \
+\cb3             \cf4 \strokec4 "isLocked"\cf2 \strokec2 : \cf6 \strokec6 false\cf2 \cb1 \strokec2 \
+\cb3         \},\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "purchaseId"\cf2 \strokec2 : \cf5 \strokec5 "com.qoobee.qoobeestickersanimated.MessageExtension.XMAS"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerSetName"\cf2 \strokec2 : \cf5 \strokec5 "FESTIVE 1"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerNames"\cf2 \strokec2 : [\cb1 \
+\cb3                 \cf5 \strokec5 "Festive0_0"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Festive0_1"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Festive0_2"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Festive0_3"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Festive0_4"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Festive0_5"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Festive0_6"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Festive0_7"\cf2 \cb1 \strokec2 \
+\cb3             ],\cb1 \
+\cb3             \cf4 \strokec4 "isLocked"\cf2 \strokec2 : \cf6 \strokec6 true\cf2 \cb1 \strokec2 \
+\cb3         \}\cb1 \
+\cb3     ],\cb1 \
+\cb3     [\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "purchaseId"\cf2 \strokec2 : \cf5 \strokec5 "com.qoobee.qoobeestickersanimated.MessageExtension.CAMERA01"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerSetName"\cf2 \strokec2 : \cf5 \strokec5 "PHOTO 1"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerNames"\cf2 \strokec2 : [\cb1 \
+\cb3                 \cf5 \strokec5 "Camera0_0"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Camera0_1"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Camera0_2"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Camera0_3"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Camera0_4"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Camera0_5"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Camera0_6"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Camera0_7"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Camera0_8"\cf2 \strokec2 ,\cb1 \
+\cb3                 \cf5 \strokec5 "Camera0_9"\cf2 \cb1 \strokec2 \
+\cb3             ],\cb1 \
+\cb3             \cf4 \strokec4 "isLocked"\cf2 \strokec2 : \cf6 \strokec6 true\cf2 \cb1 \strokec2 \
+\cb3         \}\cb1 \
+\cb3     ],\cb1 \
+\cb3     [\cb1 \
+\cb3         \{\cb1 \
+\cb3             \cf4 \strokec4 "purchaseId"\cf2 \strokec2 : \cf5 \strokec5 "FREE"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerSetName"\cf2 \strokec2 : \cf5 \strokec5 "INFO"\cf2 \strokec2 ,\cb1 \
+\cb3             \cf4 \strokec4 "stickerNames"\cf2 \strokec2 : [],\cb1 \
+\cb3             \cf4 \strokec4 "isLocked"\cf2 \strokec2 : \cf6 \strokec6 false\cf2 \cb1 \strokec2 \
+\cb3         \}\cb1 \
+\cb3     ]\cb1 \
+\cb3 ]\cb1 \
+}
