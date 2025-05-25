@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Messages View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="MessagesViewController" customModule="qoobeestickersanimated_MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="365" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nGa-pP-UFm">
+                                <rect key="frame" x="65" y="48" width="295" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="7S1-70-Jlx" firstAttribute="centerY" secondItem="nGa-pP-UFm" secondAttribute="centerY" id="Amj-hZ-oiR"/>
+                                    <constraint firstItem="7S1-70-Jlx" firstAttribute="width" secondItem="nGa-pP-UFm" secondAttribute="width" id="Cr8-wF-wLe"/>
+                                    <constraint firstItem="7S1-70-Jlx" firstAttribute="centerX" secondItem="nGa-pP-UFm" secondAttribute="centerX" id="LGn-ze-xWp"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="5" minimumInteritemSpacing="5" id="wV3-Tg-rRW">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="300" height="30"/>
+                                    <size key="footerReferenceSize" width="300" height="82"/>
+                                    <inset key="sectionInset" minX="0.0" minY="3" maxX="0.0" maxY="3"/>
+                                </collectionViewFlowLayout>
+                                <imageView key="backgroundView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7S1-70-Jlx">
+                                    <rect key="frame" x="0.0" y="0.0" width="295" height="480"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="250" id="oSf-hL-vCA"/>
+                                    </constraints>
+                                </imageView>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StickerCell" id="hfc-wX-Hhh" customClass="StickerCollectionViewCell" customModule="qoobeestickersanimated_MessagesExtension" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="33" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ncc-FF-3As" customClass="MSStickerView">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="stickerView" destination="Ncc-FF-3As" id="sZM-s6-fiZ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="SectionHeaderCell" id="h48-kI-cXc" customClass="HeaderCollectionReusableView" customModule="qoobeestickersanimated_MessagesExtension" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="295" height="30"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXh-UH-GNo">
+                                            <rect key="frame" x="52" y="5" width="76" height="20.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="76" id="ASg-M8-Gv6"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZF-nW-laE">
+                                            <rect key="frame" x="231" y="2.5" width="25" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="25" id="Fao-Tr-wC6"/>
+                                                <constraint firstAttribute="height" constant="25" id="OXH-qQ-FuU"/>
+                                            </constraints>
+                                            <state key="normal" image="RestoreIcon"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEv-bE-F4H">
+                                            <rect key="frame" x="262" y="2.5" width="25" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="25" id="OuZ-om-B0c"/>
+                                                <constraint firstAttribute="height" constant="25" id="wjE-PA-b2P"/>
+                                            </constraints>
+                                            <state key="normal" image="ShoppingBagWhite"/>
+                                        </button>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Banner0.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qip-jF-AdI">
+                                            <rect key="frame" x="0.0" y="-1" width="42" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="42" id="OfN-pI-96k"/>
+                                                <constraint firstAttribute="height" constant="32" id="oOV-NW-Qum"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.0" green="0.83529411760000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="Qip-jF-AdI" firstAttribute="centerY" secondItem="h48-kI-cXc" secondAttribute="centerY" id="5b5-uJ-Bxh"/>
+                                        <constraint firstAttribute="trailing" secondItem="WEv-bE-F4H" secondAttribute="trailing" constant="8" id="EP7-Z3-EVc"/>
+                                        <constraint firstItem="MZF-nW-laE" firstAttribute="centerY" secondItem="aXh-UH-GNo" secondAttribute="centerY" id="HPS-q4-e3v"/>
+                                        <constraint firstItem="WEv-bE-F4H" firstAttribute="leading" secondItem="MZF-nW-laE" secondAttribute="trailing" constant="6" id="JQf-mh-CYZ"/>
+                                        <constraint firstItem="aXh-UH-GNo" firstAttribute="leading" secondItem="Qip-jF-AdI" secondAttribute="trailing" constant="10" id="LcP-v0-gbS"/>
+                                        <constraint firstItem="Qip-jF-AdI" firstAttribute="leading" secondItem="h48-kI-cXc" secondAttribute="leading" id="NOM-Vu-Rpz"/>
+                                        <constraint firstItem="aXh-UH-GNo" firstAttribute="centerY" secondItem="h48-kI-cXc" secondAttribute="centerY" id="StN-u5-E1c"/>
+                                        <constraint firstItem="MZF-nW-laE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aXh-UH-GNo" secondAttribute="trailing" constant="5" id="dz2-H3-TWl"/>
+                                        <constraint firstItem="WEv-bE-F4H" firstAttribute="centerY" secondItem="aXh-UH-GNo" secondAttribute="centerY" id="kXf-IX-puC"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="bannerView" destination="Qip-jF-AdI" id="EoI-e1-34q"/>
+                                        <outlet property="btnBuy" destination="WEv-bE-F4H" id="hjT-5v-RDR"/>
+                                        <outlet property="restoreButton" destination="MZF-nW-laE" id="4wn-PI-QgY"/>
+                                        <outlet property="stickerHeader" destination="aXh-UH-GNo" id="ymM-fo-9QJ"/>
+                                    </connections>
+                                </collectionReusableView>
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="SectionFooterCell" id="ERe-cX-Vlv" customClass="FooterCollectionReusableView" customModule="qoobeestickersanimated_MessagesExtension" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="86" width="295" height="82"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*** WANT TO UNLCOKED ALL STICKERS &amp; FUTURE UPDATES? ***" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akQ-Pb-ACK">
+                                            <rect key="frame" x="0.0" y="0.0" width="295" height="20"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="R3C-Sk-dtk"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FooterBanner.png" translatesAutoresizingMaskIntoConstraints="NO" id="5jJ-D7-M1E">
+                                            <rect key="frame" x="0.0" y="52" width="42" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="42" id="8Ol-wA-z87"/>
+                                                <constraint firstAttribute="height" constant="30" id="jCx-zU-Ibh"/>
+                                            </constraints>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8T-9S-3xl">
+                                            <rect key="frame" x="265" y="54.5" width="25" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="25" id="919-Jx-dQ3"/>
+                                                <constraint firstAttribute="height" constant="25" id="yTG-Rw-8mM"/>
+                                            </constraints>
+                                            <state key="normal" title="Button" image="ShoppingBagWhite"/>
+                                            <connections>
+                                                <action selector="buyAllButtonPressed:" destination="ERe-cX-Vlv" eventType="touchUpInside" id="2zP-oL-OZ5"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All 130 Stickers + Updates!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDx-td-tqD">
+                                            <rect key="frame" x="47" y="58" width="189.5" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5DB-c8-97E">
+                                            <rect key="frame" x="235" y="54.5" width="25" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="25" id="ADW-b8-Vvl"/>
+                                                <constraint firstAttribute="height" constant="25" id="NrY-zz-Cf2"/>
+                                            </constraints>
+                                            <state key="normal" title="Button" image="RestoreIcon"/>
+                                            <connections>
+                                                <action selector="restoreButtonPressed:" destination="ERe-cX-Vlv" eventType="touchUpInside" id="hH3-F4-1sI"/>
+                                            </connections>
+                                        </button>
+                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sv1-bQ-oED">
+                                            <rect key="frame" x="0.0" y="20" width="295" height="30"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyA-oL-WVS">
+                                                    <rect key="frame" x="47.5" y="4" width="200" height="22"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JgY-WP-QNr">
+                                                            <rect key="frame" x="0.0" y="0.0" width="200" height="22"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whatsapp" translatesAutoresizingMaskIntoConstraints="NO" id="YVS-ke-xMV">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="57" height="22"/>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add to Whatsapp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUW-Aw-f49">
+                                                                    <rect key="frame" x="57" y="0.0" width="143" height="22"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="YVS-ke-xMV" firstAttribute="width" secondItem="gUW-Aw-f49" secondAttribute="width" multiplier="0.4" id="Gvb-8X-NrY"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.34080284830000002" green="0.73928946259999995" blue="0.21944487090000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="JgY-WP-QNr" secondAttribute="bottom" id="0Gz-mf-gKP"/>
+                                                        <constraint firstAttribute="width" constant="200" id="JPj-cx-5he"/>
+                                                        <constraint firstItem="JgY-WP-QNr" firstAttribute="top" secondItem="eyA-oL-WVS" secondAttribute="top" id="a1I-fn-A2h"/>
+                                                        <constraint firstItem="JgY-WP-QNr" firstAttribute="leading" secondItem="eyA-oL-WVS" secondAttribute="leading" id="ty8-3w-qVt"/>
+                                                        <constraint firstAttribute="trailing" secondItem="JgY-WP-QNr" secondAttribute="trailing" id="vKL-ec-QAI"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="eyA-oL-WVS" firstAttribute="centerX" secondItem="Sv1-bQ-oED" secondAttribute="centerX" id="CAz-DB-RBE"/>
+                                                <constraint firstItem="eyA-oL-WVS" firstAttribute="top" secondItem="Sv1-bQ-oED" secondAttribute="top" constant="4" id="DcB-MG-l8H"/>
+                                                <constraint firstAttribute="height" constant="30" id="Lmn-hj-3wV"/>
+                                                <constraint firstAttribute="bottom" secondItem="eyA-oL-WVS" secondAttribute="bottom" constant="4" id="s6r-gb-8Xl"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" red="1" green="0.30990475171232879" blue="0.58348893076849317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="XDx-td-tqD" firstAttribute="leading" secondItem="5jJ-D7-M1E" secondAttribute="trailing" constant="5" id="1z2-67-yaE"/>
+                                        <constraint firstItem="Sv1-bQ-oED" firstAttribute="top" secondItem="akQ-Pb-ACK" secondAttribute="bottom" id="7Q6-DG-Ezw"/>
+                                        <constraint firstItem="akQ-Pb-ACK" firstAttribute="leading" secondItem="ERe-cX-Vlv" secondAttribute="leading" id="9Lv-rf-fzp"/>
+                                        <constraint firstAttribute="bottom" secondItem="5jJ-D7-M1E" secondAttribute="bottom" id="HXh-bU-ksw"/>
+                                        <constraint firstItem="z8T-9S-3xl" firstAttribute="centerY" secondItem="5jJ-D7-M1E" secondAttribute="centerY" id="I8X-K4-hqe"/>
+                                        <constraint firstItem="XDx-td-tqD" firstAttribute="centerY" secondItem="5jJ-D7-M1E" secondAttribute="centerY" id="OLQ-qb-5wd"/>
+                                        <constraint firstAttribute="trailing" secondItem="z8T-9S-3xl" secondAttribute="trailing" constant="5" id="RDr-hS-q9Y"/>
+                                        <constraint firstItem="5jJ-D7-M1E" firstAttribute="leading" secondItem="ERe-cX-Vlv" secondAttribute="leading" id="VyT-N0-VPw"/>
+                                        <constraint firstItem="akQ-Pb-ACK" firstAttribute="top" secondItem="ERe-cX-Vlv" secondAttribute="top" id="XmP-Zb-shN"/>
+                                        <constraint firstAttribute="trailing" secondItem="Sv1-bQ-oED" secondAttribute="trailing" id="cvf-YP-URi"/>
+                                        <constraint firstItem="5DB-c8-97E" firstAttribute="centerY" secondItem="5jJ-D7-M1E" secondAttribute="centerY" id="gRz-Vj-udT"/>
+                                        <constraint firstItem="z8T-9S-3xl" firstAttribute="leading" secondItem="5DB-c8-97E" secondAttribute="trailing" constant="5" id="grO-hI-Em5"/>
+                                        <constraint firstAttribute="trailing" secondItem="akQ-Pb-ACK" secondAttribute="trailing" id="lKv-SQ-Lng"/>
+                                        <constraint firstItem="Sv1-bQ-oED" firstAttribute="leading" secondItem="ERe-cX-Vlv" secondAttribute="leading" id="qV9-jS-hOz"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XDx-td-tqD" secondAttribute="trailing" priority="100" id="tgh-bY-3SG"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="buyAllButton" destination="z8T-9S-3xl" id="WHc-Pv-5Ec"/>
+                                        <outlet property="footerBanner" destination="5jJ-D7-M1E" id="lbc-sb-ORn"/>
+                                        <outlet property="footerLabel" destination="akQ-Pb-ACK" id="644-zX-0fI"/>
+                                        <outlet property="restoreButton" destination="5DB-c8-97E" id="7Fm-J6-bWO"/>
+                                        <outlet property="sectionFooterLabel" destination="XDx-td-tqD" id="dyl-yr-eaE"/>
+                                        <outlet property="viewParentWhatsappButton" destination="Sv1-bQ-oED" id="ozR-jd-Ypl"/>
+                                        <outlet property="viewWhatsappButton" destination="eyA-oL-WVS" id="1Lt-gC-QDn"/>
+                                    </connections>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="ObA-dk-sSI" id="6Jv-Sx-LDa"/>
+                                    <outlet property="delegate" destination="ObA-dk-sSI" id="m2D-3U-zmv"/>
+                                </connections>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PIR-PC-LEo">
+                                <rect key="frame" x="0.0" y="48" width="65" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="Ync-96-NZm"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="F2S-y8-jYt">
+                                    <size key="itemSize" width="55" height="40"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ButtonCell" id="cFX-P2-wlB" customClass="ButtonCollectionViewCell" customModule="qoobeestickersanimated_MessagesExtension" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="0.0" width="55" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Bce-5h-Rmo">
+                                            <rect key="frame" x="0.0" y="0.0" width="55" height="40"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EVERYDAY 1.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZVf-p8-SIn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="S79-YC-asT"/>
+                                                        <constraint firstAttribute="width" constant="55" id="otO-3m-Z0n"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="New Sticker Indicator" translatesAutoresizingMaskIntoConstraints="NO" id="kg3-Oh-dfi">
+                                                    <rect key="frame" x="43" y="0.0" width="12" height="12"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="12" id="LHW-TD-v8I"/>
+                                                        <constraint firstAttribute="height" constant="12" id="U9E-6j-TWy"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZVf-p8-SIn" firstAttribute="leading" secondItem="Bce-5h-Rmo" secondAttribute="leading" id="8N6-md-PE8"/>
+                                                <constraint firstItem="ZVf-p8-SIn" firstAttribute="top" secondItem="Bce-5h-Rmo" secondAttribute="top" id="bMf-P4-V5O"/>
+                                                <constraint firstItem="kg3-Oh-dfi" firstAttribute="top" secondItem="ZVf-p8-SIn" secondAttribute="top" id="g9w-eU-Jpq"/>
+                                                <constraint firstItem="kg3-Oh-dfi" firstAttribute="trailing" secondItem="ZVf-p8-SIn" secondAttribute="trailing" id="h0n-4c-onw"/>
+                                                <constraint firstItem="ZVf-p8-SIn" firstAttribute="centerX" secondItem="Bce-5h-Rmo" secondAttribute="centerX" id="oeA-p3-ori"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="55" height="40"/>
+                                        <connections>
+                                            <outlet property="buttonImageView" destination="ZVf-p8-SIn" id="kZX-u3-gJd"/>
+                                            <outlet property="newStickerSign" destination="kg3-Oh-dfi" id="7IW-0k-6Q9"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="ObA-dk-sSI" id="phP-HC-lNS"/>
+                                    <outlet property="delegate" destination="ObA-dk-sSI" id="fI1-ce-JGE"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LDy-ih-0nr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="nGa-pP-UFm" firstAttribute="leading" secondItem="PIR-PC-LEo" secondAttribute="trailing" id="8PO-V1-Ch0"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="top" secondItem="nGa-pP-UFm" secondAttribute="top" id="FY0-LZ-IEP"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="bottom" secondItem="nGa-pP-UFm" secondAttribute="bottom" id="OTq-6j-7Ri"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="bottom" secondItem="PIR-PC-LEo" secondAttribute="bottom" id="PPD-4n-cXC"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="top" secondItem="PIR-PC-LEo" secondAttribute="top" id="g7z-6O-Nlw"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="trailing" secondItem="nGa-pP-UFm" secondAttribute="trailing" constant="5" id="hod-8F-2yR"/>
+                            <constraint firstItem="PIR-PC-LEo" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" id="qeI-w7-MMd"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="365" height="528"/>
+                    <connections>
+                        <outlet property="buttonCollectionView" destination="PIR-PC-LEo" id="hvL-qv-fn9"/>
+                        <outlet property="infoCategoryView" destination="7S1-70-Jlx" id="gsD-Yu-uxQ"/>
+                        <outlet property="stickerCollectionView" destination="nGa-pP-UFm" id="tUH-zJ-Q1S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.15942028985509" y="65.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Banner0.png" width="100" height="76"/>
+        <image name="EVERYDAY 1.png" width="180" height="130"/>
+        <image name="FooterBanner.png" width="100" height="76"/>
+        <image name="New Sticker Indicator" width="80" height="80"/>
+        <image name="RestoreIcon" width="300" height="300"/>
+        <image name="ShoppingBagWhite" width="300" height="300"/>
+        <image name="whatsapp" width="42.5" height="42.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
