@@ -1,0 +1,739 @@
+import plistlib
+import json
+
+def convert_plist_string_to_json(plist_xml_content):
+    """
+    Converts iMessage AllStickersData.plist XML content (as a string) to a JSON string
+    with the specified structure.
+    The root of the plist is expected to be an array of arrays (categories).
+    """
+    try:
+        # The actual plist is an array at the root
+        root_array = plistlib.loads(plist_xml_content.encode('utf-8'))
+    except Exception as e:
+        print(f"Error parsing plist XML: {e}")
+        return None
+
+    output_json_root_array = []
+    special_categories_names = ["FAVOURITES", "RECENT", "INFO"]
+
+    for category_array in root_array:
+        if not isinstance(category_array, list):
+            # print(f"Skipping non-array item in root: {category_array}")
+            continue
+
+        processed_category_list = []
+        for pack_dict in category_array:
+            if not isinstance(pack_dict, dict):
+                # print(f"Skipping non-dict item in category array: {pack_dict}")
+                continue
+
+            purchase_id = pack_dict.get("purchaseId", "FREE") # Default to FREE
+            sticker_set_name = pack_dict.get("stickerSetName", "")
+            sticker_names = pack_dict.get("stickerNames", [])
+
+            # Determine isLocked status
+            # Special categories (by stickerSetName) are never locked.
+            # Otherwise, locked if purchaseId is not "FREE".
+            # The plist also sometimes contains an 'isLocked' key, but the requirement
+            # is to derive it primarily from purchaseId and special category names.
+            is_locked = True # Assume locked by default
+            if sticker_set_name.upper() in special_categories_names:
+                is_locked = False
+            elif purchase_id == "FREE":
+                is_locked = False
+            
+            # If the pack explicitly has 'isLocked': false in plist, respect it,
+            # unless it's a non-FREE item not in special_categories.
+            # The main rule is: if not FREE and not special_category -> locked.
+            # The problem states: "Set to true if purchaseId is not "FREE". Set to false if purchaseId is "FREE" or for special categories"
+            # This implies purchaseId and special category names are the primary determinants.
+            # We will ignore any pre-existing 'isLocked' key in the plist as per requirements.
+
+
+            transformed_pack = {
+                "purchaseId": purchase_id,
+                "stickerSetName": sticker_set_name,
+                "stickerNames": sticker_names,
+                "isLocked": is_locked,
+            }
+            processed_category_list.append(transformed_pack)
+        
+        if processed_category_list: # Only add category if it has processed packs
+            output_json_root_array.append(processed_category_list)
+            
+    return json.dumps(output_json_root_array, indent=4)
+
+if __name__ == '__main__':
+    # This will be replaced by reading the actual file content
+    ACTUAL_PLIST_CONTENT = """<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<dict>
+			<key>purchaseId</key>
+			<string>FREE</string>
+			<key>stickerSetName</key>
+			<string>FAVOURITES</string>
+			<key>stickerNames</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>purchaseId</key>
+			<string>FREE</string>
+			<key>stickerSetName</key>
+			<string>RECENT</string>
+			<key>stickerNames</key>
+			<array/>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>purchaseId</key>
+			<string>com.qoobee.qoobeestickersanimated.MessageExtension.EVERYDAY5</string>
+			<key>stickerSetName</key>
+			<string>EVERYDAY 5</string>
+			<key>stickerNames</key>
+			<array>
+				<string>IM_DAY5_0</string>
+				<string>IM_DAY5_1</string>
+				<string>IM_DAY5_2</string>
+				<string>IM_DAY5_3</string>
+				<string>IM_DAY5_4</string>
+				<string>IM_DAY5_5</string>
+				<string>IM_DAY5_6</string>
+				<string>IM_DAY5_7</string>
+				<string>IM_DAY5_8</string>
+				<string>IM_DAY5_9</string>
+				<string>IM_DAY5_10</string>
+				<string>IM_DAY5_11</string>
+				<string>IM_DAY5_12</string>
+				<string>IM_DAY5_13</string>
+				<string>IM_DAY5_14</string>
+				<string>IM_DAY5_15</string>
+				<string>IM_DAY5_16</string>
+				<string>IM_DAY5_17</string>
+				<string>IM_DAY5_18</string>
+				<string>IM_DAY5_19</string>
+				<string>IM_DAY5_20</string>
+				<string>IM_DAY5_21</string>
+				<string>IM_DAY5_22</string>
+				<string>IM_DAY5_23</string>
+			</array>
+		</dict>
+		<dict>
+			<key>purchaseId</key>
+			<string>com.qoobee.qoobeestickersanimated.MessageExtension.EVERYDAY</string>
+			<key>stickerSetName</key>
+			<string>EVERYDAY 1</string>
+			<key>stickerNames</key>
+			<array>
+				<string>Everyday0_0</string>
+				<string>Everyday0_1</string>
+				<string>Everyday0_2</string>
+				<string>Everyday0_3</string>
+				<string>Everyday0_4</string>
+				<string>Everyday0_5</string>
+				<string>Everyday0_6</string>
+				<string>Everyday0_7</string>
+				<string>Everyday0_8</string>
+				<string>Everyday0_9</string>
+				<string>Everyday0_10</string>
+				<string>Everyday0_11</string>
+				<string>Everyday0_12</string>
+				<string>Everyday0_13</string>
+				<string>Everyday0_14</string>
+				<string>Everyday0_15</string>
+				<string>Everyday0_16</string>
+				<string>Everyday0_17</string>
+				<string>Everyday0_18</string>
+				<string>Everyday0_19</string>
+				<string>Everyday0_20</string>
+				<string>Everyday0_21</string>
+				<string>Everyday0_22</string>
+				<string>Everyday0_23</string>
+			</array>
+		</dict>
+		<dict>
+			<key>purchaseId</key>
+			<string>com.qoobee.qoobeestickersanimated.MessageExtension.EVERYDAY2</string>
+			<key>stickerSetName</key>
+			<string>EVERYDAY 2 (Static)</string>
+			<key>stickerNames</key>
+			<array>
+				<string>Everyday1_0</string>
+				<string>Everyday1_1</string>
+				<string>Everyday1_2</string>
+				<string>Everyday1_3</string>
+				<string>Everyday1_4</string>
+				<string>Everyday1_5</string>
+				<string>Everyday1_6</string>
+				<string>Everyday1_7</string>
+				<string>Everyday1_8</string>
+				<string>Everyday1_9</string>
+				<string>Everyday1_10</string>
+				<string>Everyday1_11</string>
+				<string>Everyday1_12</string>
+				<string>Everyday1_13</string>
+				<string>Everyday1_14</string>
+				<string>Everyday1_15</string>
+				<string>Everyday1_16</string>
+				<string>Everyday1_17</string>
+				<string>Everyday1_18</string>
+				<string>Everyday1_19</string>
+				<string>Everyday1_20</string>
+				<string>Everyday1_21</string>
+				<string>Everyday1_22</string>
+				<string>Everyday1_23</string>
+				<string>Everyday1_24</string>
+				<string>Everyday1_25</string>
+				<string>Everyday1_26</string>
+				<string>Everyday1_27</string>
+				<string>Everyday1_28</string>
+				<string>Everyday1_29</string>
+			</array>
+		</dict>
+		<dict>
+			<key>purchaseId</key>
+			<string>com.qoobee.qoobeestickersanimated.MessageExtension.EVERYDAY3</string>
+			<key>stickerSetName</key>
+			<string>EVERYDAY 3 (Static)</string>
+			<key>stickerNames</key>
+			<array>
+				<string>Everyday2_0</string>
+				<string>Everyday2_1</string>
+				<string>Everyday2_2</string>
+				<string>Everyday2_3</string>
+				<string>Everyday2_4</string>
+				<string>Everyday2_5</string>
+				<string>Everyday2_6</string>
+				<string>Everyday2_7</string>
+				<string>Everyday2_8</string>
+				<string>Everyday2_9</string>
+				<string>Everyday2_10</string>
+				<string>Everyday2_11</string>
+				<string>Everyday2_12</string>
+				<string>Everyday2_13</string>
+				<string>Everyday2_14</string>
+				<string>Everyday2_15</string>
+				<string>Everyday2_16</string>
+				<string>Everyday2_17</string>
+				<string>Everyday2_18</string>
+				<string>Everyday2_19</string>
+				<string>Everyday2_20</string>
+				<string>Everyday2_21</string>
+				<string>Everyday2_22</string>
+				<string>Everyday2_23</string>
+				<string>Everyday2_24</string>
+				<string>Everyday2_25</string>
+				<string>Everyday2_26</string>
+				<string>Everyday2_27</string>
+				<string>Everyday2_28</string>
+				<string>Everyday2_29</string>
+			</array>
+		</dict>
+		<dict>
+			<key>purchaseId</key>
+			<string>com.qoobee.qoobeestickersanimated.MessageExtension.EVERYDAY4</string>
+			<key>stickerSetName</key>
+			<string>EVERYDAY 4 (Static)</string>
+			<key>stickerNames</key>
+			<array>
+				<string>Everyday3_0</string>
+				<string>Everyday3_1</string>
+				<string>Everyday3_2</string>
+				<string>Everyday3_3</string>
+				<string>Everyday3_4</string>
+				<string>Everyday3_5</string>
+				<string>Everyday3_6</string>
+				<string>Everyday3_7</string>
+				<string>Everyday3_8</string>
+				<string>Everyday3_9</string>
+				<string>Everyday3_10</string>
+				<string>Everyday3_11</string>
+				<string>Everyday3_12</string>
+				<string>Everyday3_13</string>
+				<string>Everyday3_14</string>
+				<string>Everyday3_15</string>
+				<string>Everyday3_16</string>
+				<string>Everyday3_17</string>
+			</array>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>purchaseId</key>
+			<string>com.qoobee.qoobeestickersanimated.MessageExtension.HAPPY</string>
+			<key>stickerSetName</key>
+			<string>HAPPY 1</string>
+			<key>stickerNames</key>
+			<array>
+				<string>Happy0_0</string>
+				<string>Happy0_1</string>
+				<string>Happy0_2</string>
+				<string>Happy0_3</string>
+				<string>Happy0_4</string>
+				<string>Happy0_5</string>
+				<string>Happy0_6</string>
+				<string>Happy0_7</string>
+				<string>Happy0_8</string>
+				<string>Happy0_9</string>
+				<string>Happy0_10</string>
+				<string>Happy0_11</string>
+				<string>Happy0_12</string>
+				<string>Happy0_13</string>
+				<string>Happy0_14</string>
+				<string>Happy0_15</string>
+				<string>Happy0_16</string>
+				<string>Happy0_17</string>
+				<string>Happy0_18</string>
+				<string>Happy0_19</string>
+				<string>Happy0_20</string>
+				<string>Happy0_21</string>
+				<string>Happy0_22</string>
+				<string>Happy0_23</string>
+			</array>
+		</dict>
+		<dict>
+			<key>isLocked</key>
+			<true/>
+			<key>purchaseId</key>
+			<string>com.qoobee.qoobeestickersanimated.MessageExtension.HAPPY02</string>
+			<key>stickerSetName</key>
+			<string>HAPPY 2</string>
+			<key>stickerNames</key>
+			<array>
+				<string>Happy1_0</string>
+				<string>Happy1_1</string>
+				<string>Happy1_2</string>
+				<string>Happy1_3</string>
+				<string>Happy1_4</string>
+				<string>Happy1_5</string>
+				<string>Happy1_6</string>
+				<string>Happy1_7</string>
+				<string>Happy1_8</string>
+				<string>Happy1_9</string>
+				<string>Happy1_10</string>
+				<string>Happy1_11</string>
+				<string>Happy1_12</string>
+				<string>Happy1_13</string>
+				<string>Happy1_14</string>
+				<string>Happy1_15</string>
+				<string>Happy1_16</string>
+			</array>
+		</dict>
+		<dict>
+			<key>isLocked</key>
+			<true/>
+			<key>purchaseId</key>
+			<string>com.qoobee.qoobeestickersanimated.MessageExtension.HAPPY03</string>
+			<key>stickerSetName</key>
+			<string>HAPPY 3 (Static)</string>
+			<key>stickerNames</key>
+			<array>
+				<string>Happy2_0</string>
+				<string>Happy2_1</string>
+				<string>Happy2_2</string>
+				<string>Happy2_3</string>
+				<string>Happy2_4</string>
+				<string>Happy2_5</string>
+				<string>Happy2_6</string>
+				<string>Happy2_7</string>
+				<string>Happy2_8</string>
+				<string>Happy2_9</string>
+				<string>Happy2_10</string>
+				<string>Happy2_11</string>
+				<string>Happy2_12</string>
+				<string>Happy2_13</string>
+				<string>Happy2_14</string>
+				<string>Happy2_15</string>
+				<string>Happy2_16</string>
+				<string>Happy2_17</string>
+				<string>Happy2_18</string>
+				<string>Happy2_19</string>
+				<string>Happy2_20</string>
+				<string>Happy2_21</string>
+				<string>Happy2_22</string>
+				<string>Happy2_23</string>
+				<string>Happy2_24</string>
+				<string>Happy2_25</string>
+				<string>Happy2_26</string>
+				<string>Happy2_27</string>
+				<string>Happy2_28</string>
+			</array>
+		</dict>
+		<dict>
+			<key>isLocked</key>
+			<true/>
+			<key>purchaseId</key>
+			<string>com.qoobee.qoobeestickersanimated.MessageExtension.HAPPY04</string>
+			<key>stickerSetName</key>
+			<string>HAPPY 4 (Static)</string>
+			<key>stickerNames</key>
+			<array>
+				<string>Happy3_0</string>
+				<string>Happy3_1</string>
+				<string>Happy3_2</string>
+				<string>Happy3_3</string>
+				<string>Happy3_4</string>
+				<string>Happy3_5</string>
+				<string>Happy3_6</string>
+				<string>Happy3_7</string>
+				<string>Happy3_8</string>
+				<string>Happy3_9</string>
+				<string>Happy3_10</string>
+				<string>Happy3_11</string>
+				<string>Happy3_12</string>
+				<string>Happy3_13</string>
+				<string>Happy3_14</string>
+				<string>Happy3_15</string>
+				<string>Happy3_16</string>
+				<string>Happy3_17</string>
+				<string>Happy3_18</string>
+				<string>Happy3_19</string>
+				<string>Happy3_20</string>
+				<string>Happy3_21</string>
+				<string>Happy3_22</string>
+				<string>Happy3_23</string>
+				<string>Happy3_24</string>
+				<string>Happy3_25</string>
+				<string>Happy3_26</string>
+				<string>Happy3_27</string>
+				<string>Happy3_28</string>
+				<string>Happy3_29</string>
+			</array>
+		</dict>
+		<dict>
+			<key>isLocked</key>
+			<true/>
+			<key>purchaseId</key>
+			<string>com.qoobee.qoobeestickersanimated.MessageExtension.HAPPY05</string>
+			<key>stickerSetName</key>
+			<string>HAPPY 5 (Static)</string>
+			<key>stickerNames</key>
+			<array>
+				<string>Happy4_0</string>
+				<string>Happy4_1</string>
+				<string>Happy4_2</string>
+				<string>Happy4_3</string>
+				<string>Happy4_4</string>
+				<string>Happy4_5</string>
+				<string>Happy4_6</string>
+				<string>Happy4_7</string>
+				<string>Happy4_8</string>
+				<string>Happy4_9</string>
+				<string>Happy4_10</string>
+				<string>Happy4_11</string>
+				<string>Happy4_12</string>
+				<string>Happy4_13</string>
+				<string>Happy4_14</string>
+				<string>Happy4_15</string>
+				<string>Happy4_16</string>
+				<string>Happy4_17</string>
+				<string>Happy4_18</string>
+				<string>Happy4_19</string>
+				<string>Happy4_20</string>
+				<string>Happy4_21</string>
+				<string>Happy4_22</string>
+				<string>Happy4_23</string>
+				<string>Happy4_24</string>
+			</array>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>purchaseId</key>
+			<string>com.qoobee.qoobeestickersanimated.MessageExtension.LOVE</string>
+			<key>stickerSetName</key>
+			<string>LOVE 1</string>
+			<key>stickerNames</key>
+			<array>
+				<string>Love0_0</string>
+				<string>Love0_1</string>
+				<string>Love0_2</string>
+				<string>Love0_3</string>
+				<string>Love0_4</string>
+				<string>Love0_5</string>
+				<string>Love0_6</string>
+				<string>Love0_7</string>
+				<string>Love0_8</string>
+				<string>Love0_9</string>
+				<string>Love0_10</string>
+				<string>Love0_11</string>
+				<string>Love0_12</string>
+				<string>Love0_13</string>
+				<string>Love0_14</string>
+				<string>Love0_15</string>
+				<string>Love0_16</string>
+				<string>Love0_17</string>
+				<string>Love0_18</string>
+				<string>Love0_19</string>
+				<string>Love0_20</string>
+				<string>Love0_21</string>
+				<string>Love0_22</string>
+				<string>Love0_23</string>
+			</array>
+		</dict>
+		<dict>
+			<key>purchaseId</key>
+			<string>com.qoobee.qoobeestickersanimated.MessageExtension.LOVE</string>
+			<key>stickerSetName</key>
+			<string>LOVE 2 (Static)</string>
+			<key>stickerNames</key>
+			<array>
+				<string>Love1_0</string>
+				<string>Love1_1</string>
+				<string>Love1_2</string>
+				<string>Love1_3</string>
+				<string>Love1_4</string>
+				<string>Love1_5</string>
+				<string>Love1_6</string>
+				<string>Love1_7</string>
+				<string>Love1_8</string>
+				<string>Love1_9</string>
+				<string>Love1_10</string>
+				<string>Love1_11</string>
+				<string>Love1_12</string>
+				<string>Love1_13</string>
+				<string>Love1_14</string>
+				<string>Love1_15</string>
+				<string>Love1_16</string>
+				<string>Love1_17</string>
+				<string>Love1_18</string>
+				<string>Love1_19</string>
+				<string>Love1_20</string>
+				<string>Love1_21</string>
+				<string>Love1_22</string>
+				<string>Love1_23</string>
+				<string>Love1_24</string>
+				<string>Love1_25</string>
+				<string>Love1_26</string>
+				<string>Love1_27</string>
+				<string>Love1_28</string>
+				<string>Love1_29</string>
+			</array>
+		</dict>
+		<dict>
+			<key>purchaseId</key>
+			<string>com.qoobee.qoobeestickersanimated.MessageExtension.LOVE</string>
+			<key>stickerSetName</key>
+			<string>LOVE 3 (Static)</string>
+			<key>stickerNames</key>
+			<array>
+				<string>Love2_0</string>
+				<string>Love2_1</string>
+				<string>Love2_2</string>
+				<string>Love2_3</string>
+				<string>Love2_4</string>
+				<string>Love2_5</string>
+				<string>Love2_6</string>
+				<string>Love2_7</string>
+				<string>Love2_8</string>
+				<string>Love2_9</string>
+				<string>Love2_10</string>
+				<string>Love2_11</string>
+				<string>Love2_12</string>
+				<string>Love2_13</string>
+				<string>Love2_14</string>
+				<string>Love2_15</string>
+				<string>Love2_16</string>
+				<string>Love2_17</string>
+				<string>Love2_18</string>
+				<string>Love2_19</string>
+				<string>Love2_20</string>
+				<string>Love2_21</string>
+				<string>Love2_22</string>
+				<string>Love2_23</string>
+				<string>Love2_24</string>
+				<string>Love2_25</string>
+				<string>Love2_26</string>
+				<string>Love2_27</string>
+				<string>Love2_28</string>
+			</array>
+		</dict>
+		<dict>
+			<key>purchaseId</key>
+			<string>com.qoobee.qoobeestickersanimated.MessageExtension.LOVE</string>
+			<key>stickerSetName</key>
+			<string>LOVE 4</string>
+			<key>stickerNames</key>
+			<array>
+				<string>Love3_0</string>
+				<string>Love3_1</string>
+				<string>Love3_2</string>
+				<string>Love3_3</string>
+				<string>Love3_4</string>
+				<string>Love3_5</string>
+			</array>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>purchaseId</key>
+			<string>com.qoobee.qoobeestickersanimated.MessageExtension.SAD</string>
+			<key>stickerSetName</key>
+			<string>SAD 1</string>
+			<key>stickerNames</key>
+			<array>
+				<string>Sad0_0</string>
+				<string>Sad0_1</string>
+				<string>Sad0_2</string>
+				<string>Sad0_3</string>
+				<string>Sad0_4</string>
+				<string>Sad0_5</string>
+				<string>Sad0_6</string>
+				<string>Sad0_7</string>
+				<string>Sad0_8</string>
+				<string>Sad0_9</string>
+				<string>Sad0_10</string>
+				<string>Sad0_11</string>
+			</array>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>purchaseId</key>
+			<string>com.qoobee.qoobeestickersanimated.MessageExtension.ANNOYED</string>
+			<key>stickerSetName</key>
+			<string>ANNOYED 1</string>
+			<key>stickerNames</key>
+			<array>
+				<string>Angry0_0</string>
+				<string>Angry0_1</string>
+				<string>Angry0_2</string>
+				<string>Angry0_3</string>
+				<string>Angry0_4</string>
+				<string>Angry0_5</string>
+				<string>Angry0_6</string>
+				<string>Angry0_7</string>
+				<string>Angry0_8</string>
+				<string>Angry0_9</string>
+				<string>Angry0_10</string>
+				<string>Angry0_11</string>
+			</array>
+		</dict>
+		<dict>
+			<key>purchaseId</key>
+			<string>com.qoobee.qoobeestickersanimated.MessageExtension.ANNOYED2</string>
+			<key>stickerSetName</key>
+			<string>ANNOYED 2 (Static)</string>
+			<key>stickerNames</key>
+			<array>
+				<string>Angry1_0</string>
+				<string>Angry1_1</string>
+				<string>Angry1_2</string>
+				<string>Angry1_3</string>
+				<string>Angry1_4</string>
+				<string>Angry1_5</string>
+				<string>Angry1_6</string>
+				<string>Angry1_7</string>
+				<string>Angry1_8</string>
+				<string>Angry1_9</string>
+				<string>Angry1_10</string>
+				<string>Angry1_11</string>
+				<string>Angry1_12</string>
+				<string>Angry1_13</string>
+				<string>Angry1_14</string>
+				<string>Angry1_15</string>
+				<string>Angry1_16</string>
+				<string>Angry1_17</string>
+				<string>Angry1_18</string>
+				<string>Angry1_19</string>
+				<string>Angry1_20</string>
+				<string>Angry1_21</string>
+				<string>Angry1_22</string>
+				<string>Angry1_23</string>
+				<string>Angry1_24</string>
+				<string>Angry1_25</string>
+				<string>Angry1_26</string>
+				<string>Angry1_27</string>
+				<string>Angry1_28</string>
+				<string>Angry1_29</string>
+				<string>Angry1_30</string>
+			</array>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>purchaseId</key>
+			<string>FREE</string>
+			<key>stickerSetName</key>
+			<string>FESTIVE 2</string>
+			<key>stickerNames</key>
+			<array>
+				<string>Festive1_1</string>
+				<string>Festive1_2</string>
+				<string>Festive1_3</string>
+				<string>Festive1_4</string>
+				<string>Festive1_5</string>
+				<string>Festive1_6</string>
+			</array>
+		</dict>
+		<dict>
+			<key>purchaseId</key>
+			<string>com.qoobee.qoobeestickersanimated.MessageExtension.XMAS</string>
+			<key>stickerSetName</key>
+			<string>FESTIVE 1</string>
+			<key>stickerNames</key>
+			<array>
+				<string>Festive0_0</string>
+				<string>Festive0_1</string>
+				<string>Festive0_2</string>
+				<string>Festive0_3</string>
+				<string>Festive0_4</string>
+				<string>Festive0_5</string>
+				<string>Festive0_6</string>
+				<string>Festive0_7</string>
+			</array>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>purchaseId</key>
+			<string>com.qoobee.qoobeestickersanimated.MessageExtension.CAMERA01</string>
+			<key>stickerSetName</key>
+			<string>PHOTO 1</string>
+			<key>stickerNames</key>
+			<array>
+				<string>Camera0_0</string>
+				<string>Camera0_1</string>
+				<string>Camera0_2</string>
+				<string>Camera0_3</string>
+				<string>Camera0_4</string>
+				<string>Camera0_5</string>
+				<string>Camera0_6</string>
+				<string>Camera0_7</string>
+				<string>Camera0_8</string>
+				<string>Camera0_9</string>
+			</array>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>purchaseId</key>
+			<string>FREE</string>
+			<key>stickerSetName</key>
+			<string>INFO</string>
+			<key>stickerNames</key>
+			<array/>
+		</dict>
+	</array>
+</array>
+</plist>
+"""
+    # In a real run, you'd load ACTUAL_PLIST_CONTENT from the file like this:
+    # with open("Qoobee-imessage-2024 MessagesExtension/AllStickersData.plist", "r", encoding="utf-8") as f:
+    #     ACTUAL_PLIST_CONTENT = f.read()
+
+    json_output_str = convert_plist_string_to_json(ACTUAL_PLIST_CONTENT)
+
+    if json_output_str:
+        try:
+            with open("all_stickers_data.json", "w", encoding="utf-8") as f:
+                f.write(json_output_str)
+            print("Successfully converted actual plist to JSON and saved to all_stickers_data.json")
+        except IOError as e:
+            print(f"Error writing JSON to file: {e}")
+    else:
+        print("Failed to convert actual plist to JSON.")
